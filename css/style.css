@@ -1,0 +1,106 @@
+body {
+  background-color: #F8F9FA;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header img {
+  height: 50px;
+}
+
+.imgi {
+  height: 20rem;
+  border-radius: 15px;
+  margin-left: 4rem;
+}
+
+.cards {
+  margin-top: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  margin-left: 20px;
+}
+
+.card {
+  margin-left: 5px;
+}
+
+.boton-verde {
+  margin-top: 10px;
+  margin-left: 5px;
+  background-color: rgb(102, 255, 47);
+  border: 1px rgb(102, 255, 47);
+}
+.boton-verde:hover {
+  background-color: rgb(255, 206, 47);
+  transition: 1s;
+}
+
+.boton-rojo {
+  background-color: rgb(255, 95, 47);
+  border: 1px rgb(255, 95, 47);
+}
+.boton-rojo:hover {
+  background-color: rgb(255, 206, 47);
+  transition: 1s;
+}
+
+.introduccion {
+  background-color: #1a1a1a;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10px;
+  width: 90% !important;
+  margin-top: 40px;
+  font-size: large;
+  margin-bottom: 30px;
+}
+.introduccion img {
+  height: 250px;
+  width: 350px;
+  align-items: center;
+}
+
+.introduccion div p {
+  padding: 20px;
+}
+
+.introduccion div h3 {
+  padding: 10px;
+}
+
+.introduccion div h2 {
+  padding: 10px;
+}
+
+.introduccion div button {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+footer {
+  background-color: rgb(207, 207, 207);
+}
+footer div {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+footer div ul {
+  align-items: center;
+  display: flex;
+}
+footer div ul li {
+  border-radius: 5px;
+  align-items: center;
+  list-style-type: none;
+  margin: 10px;
+}
+footer div a {
+  text-decoration: none;
+  color: black;
+}
+footer div img {
+  height: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */

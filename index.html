@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MilaVerse - inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="imgs/logo.png" alt="logo-mila">
+                MilaVerse
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#milas">Milanesas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Promos</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Ej: Milanesa de Pollo" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+
+        <img src="imgs/mejorado.jpg" alt="Milaverse-imagenprincipio" class="imgi">
+        <center><h1>Bienvenido a MilaVerse</h1></center>
+
+        <div class="cards" id="milas">
+            <div class="card" style="width: 18rem;">
+                <img src="imgs/1.jpeg" class="card-img-top" alt="Milanesa napo-1">
+                <div class="card-body">
+                  <h5 class="card-title">Milanesa Napolitana - $1900 (Con Bebida)</h5>
+                  <p class="card-text">milanesa de carne con papas y verduras <strong>Bebidas: Cervesas, Fanta, Spite, Coca Cola</strong></p>
+                  <button class="btn btn-primary boton-verde" onclick="agregar1();">Agregar</button>
+                  <button class="btn btn-primary boton-rojo" onclick="quitar1();">Quitar</button>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="imgs/2.jpeg" class="card-img-top" alt="mila de verdura-2">
+                <div class="card-body">
+                  <h5 class="card-title">Milanesa Vegana - $2700 (Con Bebida)</h5>
+                  <p class="card-text">Milanesa de soja con ensalada: tomate, lechuga, cebolla <strong>Bebidas: Cervesas, Fanta, Spite, Coca Cola</strong></p>
+                  <button class="btn btn-primary boton-verde" onclick="agregar2();">Agregar</button>
+                  <button class="btn btn-primary boton-rojo" onclick="quitar2();">Quitar</button>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="imgs/3.jpg" class="card-img-top" alt="sandwich de milanesa-3">
+                <div class="card-body">
+                  <h5 class="card-title">Sandwich de milanesa - $2200 (Con Bebida)</h5>
+                  <p class="card-text">Sandwich de Milanesa con fritas: lechuga, jamon, queso, milanesa, huevo (opcional) <strong>Bebidas: Cervesas, Fanta, Spite, Coca Cola</strong></p>
+                  <button class="btn btn-primary boton-verde" onclick="agregar3();">Agregar</button>
+                  <button class="btn btn-primary boton-rojo" onclick="quitar3();">Quitar</button>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="imgs/4.jpeg" class="card-img-top" alt="moustronesa-4">
+                <div class="card-body">
+                  <h5 class="card-title">Moustronesa - $3700 (Con Bebida)</h5>
+                  <p class="card-text">Milanesa de pollo o carne, con cheddar bacon y verdeo <strong>Bebidas: Cervesas, Fanta, Spite, Coca Cola</strong></p>
+                  <button class="btn btn-primary boton-verde" onclick="agregar4();">Agregar</button>
+                  <button class="btn btn-primary boton-rojo" onclick="quitar4();">Quitar</button>
+                </div>
+              </div>
+        </div>
+
+        <section class="container-fluid introduccion">
+          <button class="btn btn-primary boton-verde" onclick="pagar();">Pagar</button> 
+          <h2>Productos:</h2>
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-6" id="pagar">
+                </div>
+                <img src="imgs/banner.png" alt="hombre">
+            </div>
+            <h3 id="total">Total: $0</h3>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+
+          <img src="imgs/logo.png" alt="logo">
+          <a href="#">Milaverse</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
