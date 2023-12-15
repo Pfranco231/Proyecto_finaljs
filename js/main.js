@@ -5,7 +5,6 @@ function agregarAlLocalStorage(id, producto, precio) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     let encontrado = false;
 
-    // Verificar si el producto ya está en el carrito
     carrito.forEach(item => {
         if (item.id === id) {
             item.cantidad++;
@@ -15,7 +14,6 @@ function agregarAlLocalStorage(id, producto, precio) {
         calcularTotal();
     });
 
-    // Si el producto no está en el carrito, agregarlo
     if (!encontrado) {
         carrito.push({ id, producto, precio, cantidad: 1 });
     }
@@ -84,11 +82,10 @@ function quitar4() {
 function quitarDelLocalStorage(id) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-    // Filtrar el producto con el ID especificado
     carrito = carrito.filter(item => {
         if (item.id === id) {
             item.cantidad--;
-            return item.cantidad > 0; // Solo mantener elementos con cantidad mayor a 0
+            return item.cantidad > 0;
         }
         return true;
     });
@@ -115,10 +112,8 @@ function pagar() {
                 icon: 'success'
             });
 
-            // Eliminar todo del localStorage
             localStorage.removeItem('carrito');
 
-            // Limpiar el contenedor en la página
             aq1c.innerHTML = '';
 
             calcularTotal();
@@ -136,7 +131,6 @@ function calcularTotal() {
 function cargarCarritoDesdeLocalStorage() {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-    // Limpiar el contenedor antes de volver a cargar los elementos
     aq1c.innerHTML = '';
 
     carrito.forEach(item => {
